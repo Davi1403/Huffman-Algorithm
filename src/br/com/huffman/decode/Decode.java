@@ -36,6 +36,7 @@ public class Decode {
         for (HashMap.Entry<Character, String> entry : huffmanCodesTable.entrySet()){
             huffmanCodesTableInverted.put(entry.getValue(), entry.getKey());
         }
+        //System.out.println(huffmanCodesTableInverted);
 
         // -- DECODIFICA
 
@@ -48,7 +49,8 @@ public class Decode {
                 auxString.setLength(0);
             }
         }
-        System.out.println(outText);
+        //System.out.println(outText);
         file.stringToTxt(outText.toString(), outputPath);
+
     }
 }

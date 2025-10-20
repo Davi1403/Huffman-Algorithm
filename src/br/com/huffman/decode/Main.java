@@ -9,19 +9,25 @@ public class Main {
         // -- NOME DO ARQUIVO DE ENTRADA --
 
         System.out.println("Caminho do arquivo a ser descodificado : ");
-        //String inputPath = scanner.next();
-        String inputPath = "Arquivos/ArquivoCodificado";
+        String inputPath = scanner.next();
+        //String inputPath = "Arquivos/ArquivoCodificado";
 
         // -- NOME DO AQUIVO DE SAIDA --
 
         System.out.println("Nome do arquivo de saída : ");
-        //String outputPath = scanner.next();
-        String outputPath = "Arquivos/TextoDescodificado";
+        String outputPath = scanner.next();
+        //String outputPath = "Arquivos/TextoDescodificado";
 
         //
 
         Decode h = new Decode(inputPath);
-        h.decode(outputPath);
+
+        try {
+            h.decode(outputPath);
+            System.out.println("Arquivo descompactado com sucesso para : " + outputPath);
+        }catch (IOException e){
+            System.err.println("Ocorreu um erro ao descompactar o arquivo : " + e.getMessage());
+        }
 
 
 

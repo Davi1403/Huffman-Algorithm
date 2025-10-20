@@ -37,19 +37,20 @@ import java.io.IOException;
         }
 
         public void createTable(String myString){
+
+            // -- LOOP QUE PERCORRE TODA A STTRING DE ENTRADA
+
             for (int i = 0 ; i < myString.length() ; i++){
                 char letter = myString.charAt(i);
+
+                // -- SE A LETRA JÁ EXISTIR NA TABELA --
                 if (lettersArray.contains(letter)) {
-                    int index = lettersArray.indexOf(letter);
-                    frequencyArray.set(index, frequencyArray.get(index) + 1); // SE A LETRA JÁ ESTIVER NO ARRAY, ICREMENTA 1 (INDEX DE ONDE ESTÁ A LETRA NO ARRAY LETRAS, O VALOR É INCREMENTADO NO ARRAY DE FREQUENCIA
-                    //System.out.println("+1 no Index = " +  lettersArray.indexOf(letter));
+                    int index = lettersArray.indexOf(letter);                   // ICREMENTA 1 (INDEX DE ONDE ESTÁ A LETRA NO ARRAY LETRAS,
+                    frequencyArray.set(index, frequencyArray.get(index) + 1);   //  O VALOR É INCREMENTADO NO ARRAY DE FREQUENCIA
                 }
                 else {
-                    lettersArray.add(letter); // SE NÃO, ADICIONA A LETRA NO ARRAY DE LETRAS E 1 NO ARRAY DE FREQUENCIA
-                    frequencyArray.add(1);
-                    //System.out.println(letter + " entrou na lista");
-                    //System.out.println( "mais um em freq");
-                    //System.out.println(
+                    lettersArray.add(letter); // SE NÃO, ADICIONA A LETRA NO ARRAY
+                    frequencyArray.add(1);    // E ADD 1 NA TABELA DE FREQUÊNCIA
                 }
             }
         }

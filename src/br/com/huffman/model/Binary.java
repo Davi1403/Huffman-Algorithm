@@ -17,7 +17,8 @@ public class Binary {
 
             for (int i = 0; i < lettersArray.size(); ++i) {
                 out.writeByte((byte) lettersArray.get(i).charValue());
-                out.writeInt((Integer) frequencyArray.get(i));
+                System.out.println();
+                out.writeInt(frequencyArray.get(i));
             }
 
             int totalBits = huffmanCodes.length();
@@ -64,8 +65,8 @@ public class Binary {
             }
 
             this.huffmanCodes = auxHuffmanCodes.substring(0, totalBits);
-            System.out.println("Bits compactados:");
-            System.out.println(this.huffmanCodes);
+            //System.out.println("Bits compactados:");
+            //System.out.println(this.huffmanCodes);
         }
     }
 
